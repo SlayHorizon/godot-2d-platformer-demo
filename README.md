@@ -3,7 +3,7 @@
 This **open-source 2D platformer demo** was originally created as an educational project for a school lesson.  
 It is now freely accessible for anyone to explore, learn from, and modify.  
 
-![image](https://github.com/user-attachments/assets/e2cbc3d7-36ad-466b-b927-05d2405c129c)
+![411270231-e2cbc3d7-36ad-466b-b927-05d2405c129c](https://github.com/user-attachments/assets/c0ff6526-d402-4b85-a378-53434a0f8e15)
 
 
 ## Features & What You Could Learn
