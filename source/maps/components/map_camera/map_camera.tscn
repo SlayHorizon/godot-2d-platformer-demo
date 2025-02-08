@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpkv2m0oqdfn5"]
+
+[ext_resource type="Script" path="res://source/maps/components/map_camera/map_camera.gd" id="1_6nonx"]
+
+[node name="MapCamera" type="Camera2D"]
+z_index = 3
+offset = Vector2(288, 160)
+process_callback = 0
+script = ExtResource("1_6nonx")
+offset2 = Vector2(0, 0)
