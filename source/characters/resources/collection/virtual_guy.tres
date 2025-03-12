@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dogqrm4w7v4va" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Idle (32x32).png" id="5_1i5l3"]
 [ext_resource type="Texture2D" uid="uid://cumr3pe2w23i8" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Jump (32x32).png" id="6_63clm"]
 [ext_resource type="Texture2D" uid="uid://52nv7lpu1153" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Run (32x32).png" id="7_wujs5"]
-[ext_resource type="Script" path="res://source/characters/resources/character_resource.gd" id="8_ahu3l"]
+[ext_resource type="Script" uid="uid://d3t3qd3vee8re" path="res://source/characters/resources/character_resource.gd" id="8_ahu3l"]
 [ext_resource type="Texture2D" uid="uid://dfvit2ya3qfg1" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Wall Jump (32x32).png" id="9_xrnys"]
 
 [resource]

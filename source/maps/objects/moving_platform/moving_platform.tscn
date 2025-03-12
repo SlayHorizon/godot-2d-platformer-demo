@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://ch0087t1p10a5"]
 
-[ext_resource type="Script" path="res://source/maps/objects/moving_platform/moving_platform.gd" id="1_vpnhd"]
+[ext_resource type="Script" uid="uid://bey8jy7dpusmh" path="res://source/maps/objects/moving_platform/moving_platform.gd" id="1_vpnhd"]
 [ext_resource type="Texture2D" uid="uid://c4gg6t8jeicca" path="res://assets/pixel-adventure/Traps/Platforms/Brown On (32x8).png" id="2_ifyk0"]
 [ext_resource type="Texture2D" uid="uid://bqrc0rtjkdexx" path="res://assets/pixel-adventure/Traps/Platforms/Grey On (32x8).png" id="2_rgw7t"]
 

@@ -10,9 +10,8 @@ const ALLOWED_PASS_THROUGH: Array[Vector2i] = [
 	Vector2i(17, 2), Vector2i(18, 2), Vector2i(19, 2),
 ]
 
-var states: Dictionary
+var states: Dictionary[StringName, PlayerState]
 
-var acce
 var speed: float = 105.0
 var jump_velocity: float = -310.0
 var gravity := Vector2(0, 980)
@@ -20,8 +19,8 @@ var gravity := Vector2(0, 980)
 
 var input_direction := Vector2.ZERO
 
-var jump_buffer := true
-var double_jump := true
+var jump_buffer: bool = true
+var double_jump: bool = true
 
 var state_callback: Callable
 
@@ -29,23 +28,22 @@ var state_callback: Callable
 
 
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		set_physics_process(false)
+		return
+	
 	for state: PlayerState in $States.get_children():
 		state.animation_player = animation_player
 		state.player = self
-		states[state.name] = state
-	if Engine.is_editor_hint():
-		set_physics_process(false)
-	else:
-		hide()
-		await get_tree().create_timer(1.0).timeout
-		show()
-		states.Appear.enter()
+		states.set(state.name, state)
+	
+	states.Appear.enter()
 
 
 func _physics_process(delta: float) -> void:
 	if state_callback:
 		state_callback.call(delta)
-	input_direction = get_input_direction()
+	input_direction = _get_input_direction()
 	_set_sprite_direction()
 	move_and_slide()
 
@@ -69,7 +67,7 @@ func _set_sprite_direction() -> void:
 		sprite.flip_h = true
 
 
-func get_input_direction() -> Vector2:
+func _get_input_direction() -> Vector2:
 	return(
 		Input.get_vector("ui_left", "ui_right", "ui_down", "ui_up")
 	)

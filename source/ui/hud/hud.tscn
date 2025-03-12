@@ -1,15 +1,15 @@
 [gd_scene load_steps=13 format=3 uid="uid://c2dysy8ciq6t3"]
 
-[ext_resource type="Script" path="res://source/ui/hud/hud.gd" id="1_6swf3"]
+[ext_resource type="Script" uid="uid://be7qj7dr1wwb5" path="res://source/ui/hud/hud.gd" id="1_6swf3"]
 [ext_resource type="FontFile" uid="uid://bnhgqdneckwad" path="res://assets/pixel-adventure/Menu/Text/Text (White) (8x10).png" id="1_wwh8y"]
-[ext_resource type="Script" path="res://source/ui/hud/fruit_count.gd" id="2_ufr8b"]
-[ext_resource type="Shader" path="res://source/shaders/hud.gdshader" id="4_0hf0d"]
+[ext_resource type="Script" uid="uid://cwtafvud2wpab" path="res://source/ui/hud/fruit_count.gd" id="2_ufr8b"]
+[ext_resource type="Shader" uid="uid://cyuyvt360bd36" path="res://source/shaders/hud.gdshader" id="4_0hf0d"]
 [ext_resource type="Texture2D" uid="uid://da8vnlcipy4xa" path="res://assets/pixel-adventure/Menu/Buttons/Restart.png" id="4_32kfj"]
-[ext_resource type="Script" path="res://source/ui/hud/buttons/reload_button.gd" id="5_270yy"]
+[ext_resource type="Script" uid="uid://c1yrukishr3lt" path="res://source/ui/hud/buttons/reload_button.gd" id="5_270yy"]
 [ext_resource type="Texture2D" uid="uid://b3mlwh0eenlkp" path="res://assets/pixel-adventure/Menu/Buttons/Close.png" id="6_o3yqv"]
 [ext_resource type="Texture2D" uid="uid://dyv32185pn2h8" path="res://assets/pixel-adventure/Menu/Buttons/Volume.png" id="6_r2w7h"]
-[ext_resource type="Script" path="res://source/ui/hud/buttons/sound_button.gd" id="6_v2jag"]
-[ext_resource type="Script" path="res://source/ui/hud/buttons/exit_button.gd" id="7_fwfkc"]
+[ext_resource type="Script" uid="uid://d3tfcjsn5rnjg" path="res://source/ui/hud/buttons/sound_button.gd" id="6_v2jag"]
+[ext_resource type="Script" uid="uid://dp5pgya0v1wsa" path="res://source/ui/hud/buttons/exit_button.gd" id="7_fwfkc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i544m"]
 shader = ExtResource("4_0hf0d")

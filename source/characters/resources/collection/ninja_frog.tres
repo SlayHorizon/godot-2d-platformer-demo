@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bhveulgx5jiqo" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Idle (32x32).png" id="5_xau0j"]
 [ext_resource type="Texture2D" uid="uid://nmjma4m2jdsa" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Jump (32x32).png" id="6_ymcju"]
 [ext_resource type="Texture2D" uid="uid://4abks2t5o38b" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Run (32x32).png" id="7_33l50"]
-[ext_resource type="Script" path="res://source/characters/resources/character_resource.gd" id="8_gknvf"]
+[ext_resource type="Script" uid="uid://d3t3qd3vee8re" path="res://source/characters/resources/character_resource.gd" id="8_gknvf"]
 [ext_resource type="Texture2D" uid="uid://bj7jydiobwr2f" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Wall Jump (32x32).png" id="9_k6sce"]
 
 [resource]

@@ -2,19 +2,20 @@
 extends CanvasLayer
 
 
+@onready var transition_effect_rect: ColorRect = $TransitionEffectRect
+
 
 func _ready() -> void:
-	$TransitionEffect.material.set("shader_parameter/progress", 1.0)
+	transition_effect_rect.material.set("shader_parameter/progress", 1.0)
 	await transition_effect()
 
 
 func transition_effect() -> void:
-	var color_rect: ColorRect = $TransitionEffect
 	var tween := create_tween()
 	tween.tween_property(
-		color_rect,
+		transition_effect_rect,
 		"material:shader_parameter/progress",
-		0.0 if color_rect.material.get("shader_parameter/progress") == 1.0 else 1.0,
+		0.0 if transition_effect_rect.material.get("shader_parameter/progress") == 1.0 else 1.0,
 		1.2
 	)
 	await tween.finished

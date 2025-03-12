@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://huqffkk7lr7m"]
 
-[ext_resource type="Shader" path="res://source/shaders/scrolling_texture.gdshader" id="1_y87ip"]
+[ext_resource type="Shader" uid="uid://dx837828oc0qu" path="res://source/shaders/scrolling_texture.gdshader" id="1_y87ip"]
 [ext_resource type="Texture2D" uid="uid://0fpr2c1mmqqb" path="res://assets/pixel-adventure/Background/Brown.png" id="2_wn5v3"]
-[ext_resource type="Script" path="res://source/unused/parallax_background/background_sprite.gd" id="3_x7g48"]
+[ext_resource type="Script" uid="uid://bmkohkwuo01qu" path="res://source/unused/parallax_background/background_sprite.gd" id="3_x7g48"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fxepw"]
 shader = ExtResource("1_y87ip")

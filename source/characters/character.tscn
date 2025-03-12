@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://b85lnnjmjc2g6"]
 
-[ext_resource type="Script" path="res://source/characters/character.gd" id="1_hlkyw"]
+[ext_resource type="Script" uid="uid://ddbcdvr7j8mve" path="res://source/characters/character.gd" id="1_hlkyw"]
 [ext_resource type="Texture2D" uid="uid://bhveulgx5jiqo" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Idle (32x32).png" id="2_18jg7"]
 
 [sub_resource type="Animation" id="Animation_xl58a"]
@@ -416,16 +416,16 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tl5nu"]
 _data = {
-"RESET": SubResource("Animation_xl58a"),
-"appear": SubResource("Animation_54pcn"),
-"desappear": SubResource("Animation_bhd0p"),
-"double_jump": SubResource("Animation_hn2ri"),
-"fall": SubResource("Animation_8ytuk"),
-"hit": SubResource("Animation_qg8ad"),
-"idle": SubResource("Animation_31r00"),
-"jump": SubResource("Animation_b3gea"),
-"run": SubResource("Animation_4jtl4"),
-"wall_jump": SubResource("Animation_bnp4e")
+&"RESET": SubResource("Animation_xl58a"),
+&"appear": SubResource("Animation_54pcn"),
+&"desappear": SubResource("Animation_bhd0p"),
+&"double_jump": SubResource("Animation_hn2ri"),
+&"fall": SubResource("Animation_8ytuk"),
+&"hit": SubResource("Animation_qg8ad"),
+&"idle": SubResource("Animation_31r00"),
+&"jump": SubResource("Animation_b3gea"),
+&"run": SubResource("Animation_4jtl4"),
+&"wall_jump": SubResource("Animation_bnp4e")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adxeo"]
@@ -440,7 +440,7 @@ hframes = 11
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_tl5nu")
+&"": SubResource("AnimationLibrary_tl5nu")
 }
 autoplay = "idle"
 

@@ -22,28 +22,9 @@ func _on_current_animation_changed(animation_name: String) -> void:
 func _set_animation_texture(animation_name: String) -> void:
 	if not is_node_ready():
 		await ready
-	#sprite.texutre = character_resource.get(animation_name)
-	match animation_name:
-		"idle":
-			sprite.texture = character_resource.idle_texture
-		"run":
-			sprite.texture = character_resource.run_texture
-		"jump":
-			sprite.texture = character_resource.jump_texture
-		"double_jump":
-			sprite.texture = character_resource.double_jump_texture
-		"wall_jump":
-			sprite.texture = character_resource.wall_jump_texture
-		"fall":
-			sprite.texture = character_resource.fall_texture
-		"hit":
-			sprite.texture = character_resource.hit_texture
-		"appear":
-			sprite.texture = character_resource.appear_texture
-		"desappear":
-			sprite.texture = character_resource.desappear_texture
-		_:
-			pass
+	var animation_texture = character_resource.get(animation_name + "_texture")
+	if animation_texture != null:
+		sprite.texture = animation_texture
 
 
 func _set_character_resource(new_resource: CharacterResource) -> void:

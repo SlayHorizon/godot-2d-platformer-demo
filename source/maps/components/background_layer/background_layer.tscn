@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=4 uid="uid://bo2x2076fcjhu"]
 
-[ext_resource type="Shader" path="res://source/shaders/scrolling_texture.gdshader" id="1_bwsle"]
+[ext_resource type="Shader" uid="uid://dx837828oc0qu" path="res://source/shaders/scrolling_texture.gdshader" id="1_bwsle"]
 [ext_resource type="Texture2D" uid="uid://chyhk73mmggwn" path="res://assets/pixel-adventure/Background/Green.png" id="2_m6hx6"]
 [ext_resource type="Texture2D" uid="uid://b50ohofvy1rdl" path="res://assets/pixel-adventure/Background/Pink.png" id="3_0s4wk"]
 [ext_resource type="Texture2D" uid="uid://bkqros4be08yl" path="res://assets/pixel-adventure/Background/Purple.png" id="4_ol7sj"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://der13nk5vs8ky" path="res://assets/pixel-adventure/Background/Blue.png" id="6_74odk"]
 [ext_resource type="Texture2D" uid="uid://0fpr2c1mmqqb" path="res://assets/pixel-adventure/Background/Brown.png" id="7_mtdgq"]
 [ext_resource type="Texture2D" uid="uid://cs5trxpusqvmy" path="res://assets/pixel-adventure/Background/Gray.png" id="8_33fj2"]
-[ext_resource type="Script" path="res://source/maps/components/background_layer/background_layer.gd" id="9_lwn41"]
+[ext_resource type="Script" uid="uid://5duf7jvq013" path="res://source/maps/components/background_layer/background_layer.gd" id="9_lwn41"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_odry2"]
 shader = ExtResource("1_bwsle")

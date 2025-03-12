@@ -17,7 +17,3 @@ func process(delta: float) -> void:
 		player.states.DoubleJump.enter()
 	elif player.velocity.y > 0:
 		player.states.Fall.enter()
-
-
-#func exit() -> void:
-	#pass

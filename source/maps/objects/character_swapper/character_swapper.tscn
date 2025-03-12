@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://de0wkcgucji8q"]
 
-[ext_resource type="Script" path="res://source/maps/objects/character_swapper/character_swapper.gd" id="1_yqx3y"]
+[ext_resource type="Script" uid="uid://c6xmsstnt4k7t" path="res://source/maps/objects/character_swapper/character_swapper.gd" id="1_yqx3y"]
 [ext_resource type="PackedScene" uid="uid://b85lnnjmjc2g6" path="res://source/characters/character.tscn" id="2_fdxqc"]
 [ext_resource type="Resource" uid="uid://dcy1n344yi0yb" path="res://source/characters/resources/collection/mask_dude.tres" id="3_v4cgf"]
 
