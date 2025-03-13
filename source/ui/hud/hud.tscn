@@ -41,6 +41,8 @@ theme_override_constants/margin_bottom = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
 alignment = 2
 
 [node name="ReloadButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]

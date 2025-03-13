@@ -1,7 +1,7 @@
-# 2D Platformer Demo (Godot 4.x)
+# 2D Platformer Demo (Godot 4.4 only)
 
 This **open-source 2D platformer demo** was originally created as an educational project for a school lesson.  
-It is now freely accessible for anyone to explore, learn from, and modify.  
+It is now freely accessible for anyone to explore, learn from, and modify.
 
 ![411270231-e2cbc3d7-36ad-466b-b927-05d2405c129c](https://github.com/user-attachments/assets/c0ff6526-d402-4b85-a378-53434a0f8e15)
 
@@ -40,8 +40,8 @@ It is now freely accessible for anyone to explore, learn from, and modify.
 
 ## License
 
-This project’s source code is released under the **MIT License**, allowing free use, modification, and distribution.  
-Asset-specific licenses and credits are listed in their respective `license.txt` files.
+Project’s source code under **MIT License**.  
+Asset-specific licenses and credits are listed in their respective folder.
 
 ---
 
