@@ -4,12 +4,14 @@ extends PlayerState
 
 func enter() -> void:
 	super.enter()
+	
 	player.jump_buffer = true
 	player.double_jump = true
 
 
 func process(delta: float) -> void:
 	player.apply_gravity(delta)
+	
 	if player.velocity.y > 0:
 		player.states.Fall.enter()
 	elif player.input_direction.x:

@@ -12,7 +12,9 @@ const ALLOWED_PASS_THROUGH: Array[Vector2i] = [
 
 var states: Dictionary[StringName, PlayerState]
 
+
 var speed: float = 105.0
+var acceleration: float = 630.0
 var jump_velocity: float = -310.0
 var gravity := Vector2(0, 980)
 
@@ -43,6 +45,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if state_callback:
 		state_callback.call(delta)
+	
 	input_direction = _get_input_direction()
 	_set_sprite_direction()
 	move_and_slide()
@@ -54,17 +57,15 @@ func apply_gravity(delta: float) -> void:
 
 
 func move() -> void:
-	if input_direction.x:
-		velocity.x = move_toward(velocity.x, input_direction.x * speed, speed / 10)
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed / 10)
+	velocity.x = move_toward(
+		velocity.x, input_direction.x * speed,
+		acceleration * get_physics_process_delta_time()
+	)
 
 
 func _set_sprite_direction() -> void:
-	if input_direction.x == 1:
-		sprite.flip_h = false
-	if input_direction.x == -1:
-		sprite.flip_h = true
+	if input_direction.x:
+		sprite.flip_h = input_direction.x == -1
 
 
 func _get_input_direction() -> Vector2:
