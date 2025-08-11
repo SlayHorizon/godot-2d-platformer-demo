@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://huqffkk7lr7m"]
+
+[ext_resource type="Shader" uid="uid://dx837828oc0qu" path="res://source/shaders/scrolling_texture.gdshader" id="1_y87ip"]
+[ext_resource type="Texture2D" uid="uid://0fpr2c1mmqqb" path="res://assets/pixel-adventure/Background/Brown.png" id="2_wn5v3"]
+[ext_resource type="Script" uid="uid://bmkohkwuo01qu" path="res://source/unused/parallax_background/background_sprite.gd" id="3_x7g48"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fxepw"]
+shader = ExtResource("1_y87ip")
+shader_parameter/direction = Vector2(0, 1)
+shader_parameter/speed = 1.0
+
+[node name="ParallaxBackground" type="Parallax2D"]
+repeat_size = Vector2(64, 64)
+repeat_times = 10
+
+[node name="BackgroundSprite" type="Sprite2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fxepw")
+position = Vector2(320, 320)
+texture = ExtResource("2_wn5v3")
+centered = false
+script = ExtResource("3_x7g48")
+background_color = 1

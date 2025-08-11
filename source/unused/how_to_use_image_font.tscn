@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://nwh76gqj8iur"]
+
+[ext_resource type="FontFile" uid="uid://dhaqun24qxq28" path="res://assets/pixel-adventure/Menu/Text/Text (Black) (8x10).png" id="1_ff3gk"]
+[ext_resource type="FontFile" uid="uid://bnhgqdneckwad" path="res://assets/pixel-adventure/Menu/Text/Text (White) (8x10).png" id="2_x40vv"]
+
+[node name="ImageFont" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Explaination" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -8.0
+offset_right = 64.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_x40vv")
+text = "if you want to know
+how to use image as font:
+
+check this folder in godot:
+assets:pixel-adventure:text
+then click on any text image
+then click import tab
+
+edited properties are:
+- character ranges
+- columns
+- rows"
+horizontal_alignment = 1
+
+[node name="Examples" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlackExample" type="Label" parent="Examples"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ff3gk")
+text = "abcdefghij
+klmnopqrst
+uvwxz
+0123456789
+.,:?!()+-"
+
+[node name="WhiteExample" type="Label" parent="Examples"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x40vv")
+text = "abcdefghij
+klmnopqrst
+uvwxz
+0123456789
+.,:?!()+-"

@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8jlyy4wh5c0e"]
+
+[ext_resource type="Script" uid="uid://csu8ms8igvyo6" path="res://source/main.gd" id="1_vvgtc"]
+[ext_resource type="PackedScene" uid="uid://c6uxx2404ekx4" path="res://source/maps/map_scenes/map_demo.tscn" id="2_t0xob"]
+[ext_resource type="AudioStream" uid="uid://cwsiabkoxv2sp" path="res://assets/audio/music/noodle_cafe.wav" id="5_hmqt0"]
+[ext_resource type="Script" uid="uid://cs53enf3mtjh0" path="res://source/system/music_player.gd" id="6_tikb8"]
+[ext_resource type="PackedScene" uid="uid://dx3uj7tigt7m8" path="res://source/ui/transition_layer/transition_layer.tscn" id="20_ljs4f"]
+[ext_resource type="PackedScene" uid="uid://c2dysy8ciq6t3" path="res://source/ui/hud/hud.tscn" id="20_p4k7n"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_vvgtc")
+metadata/_edit_horizontal_guides_ = [264.0]
+
+[node name="MapDemo" parent="." instance=ExtResource("2_t0xob")]
+
+[node name="HUD" parent="." instance=ExtResource("20_p4k7n")]
+
+[node name="TransitionLayer" parent="." instance=ExtResource("20_ljs4f")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hmqt0")
+volume_db = -9.0
+autoplay = true
+script = ExtResource("6_tikb8")

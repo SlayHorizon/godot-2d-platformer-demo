@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqq4tdpt06hl6"]
+
+[ext_resource type="Script" uid="uid://dlw2gkdps3fhj" path="res://addons/fruit_map/node/fruit_map.gd" id="1_33wvw"]
+
+[node name="FruitMap" type="Node2D"]
+script = ExtResource("1_33wvw")

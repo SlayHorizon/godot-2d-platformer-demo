@@ -1,0 +1,76 @@
+[gd_scene load_steps=19 format=4 uid="uid://bo2x2076fcjhu"]
+
+[ext_resource type="Shader" uid="uid://dx837828oc0qu" path="res://source/shaders/scrolling_texture.gdshader" id="1_bwsle"]
+[ext_resource type="Texture2D" uid="uid://chyhk73mmggwn" path="res://assets/pixel-adventure/Background/Green.png" id="2_m6hx6"]
+[ext_resource type="Texture2D" uid="uid://b50ohofvy1rdl" path="res://assets/pixel-adventure/Background/Pink.png" id="3_0s4wk"]
+[ext_resource type="Texture2D" uid="uid://bkqros4be08yl" path="res://assets/pixel-adventure/Background/Purple.png" id="4_ol7sj"]
+[ext_resource type="Texture2D" uid="uid://dsm8myg3pchny" path="res://assets/pixel-adventure/Background/Yellow.png" id="5_hosob"]
+[ext_resource type="Texture2D" uid="uid://der13nk5vs8ky" path="res://assets/pixel-adventure/Background/Blue.png" id="6_74odk"]
+[ext_resource type="Texture2D" uid="uid://0fpr2c1mmqqb" path="res://assets/pixel-adventure/Background/Brown.png" id="7_mtdgq"]
+[ext_resource type="Texture2D" uid="uid://cs5trxpusqvmy" path="res://assets/pixel-adventure/Background/Gray.png" id="8_33fj2"]
+[ext_resource type="Script" uid="uid://5duf7jvq013" path="res://source/maps/components/background_layer/background_layer.gd" id="9_lwn41"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_odry2"]
+shader = ExtResource("1_bwsle")
+shader_parameter/direction = Vector2(0, -1)
+shader_parameter/speed = 0.5
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a8qgc"]
+resource_name = "green"
+texture = ExtResource("2_m6hx6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_upnck"]
+resource_name = "pink"
+texture = ExtResource("3_0s4wk")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yflom"]
+resource_name = "purple"
+texture = ExtResource("4_ol7sj")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5hnio"]
+resource_name = "yellow"
+texture = ExtResource("5_hosob")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vckup"]
+resource_name = "blue"
+texture = ExtResource("6_74odk")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hsj5n"]
+resource_name = "brown"
+texture = ExtResource("7_mtdgq")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xygny"]
+resource_name = "gray"
+texture = ExtResource("8_33fj2")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rkuhi"]
+tile_size = Vector2i(64, 64)
+sources/7 = SubResource("TileSetAtlasSource_vckup")
+sources/8 = SubResource("TileSetAtlasSource_hsj5n")
+sources/9 = SubResource("TileSetAtlasSource_xygny")
+sources/10 = SubResource("TileSetAtlasSource_a8qgc")
+sources/11 = SubResource("TileSetAtlasSource_upnck")
+sources/12 = SubResource("TileSetAtlasSource_yflom")
+sources/13 = SubResource("TileSetAtlasSource_5hnio")
+
+[node name="BackgroundLayer" type="TileMapLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_odry2")
+tile_map_data = PackedByteArray("AAAFAAQACAAAAAAAAAAGAAQACAAAAAAAAAAHAAQACAAAAAAAAAAIAAQACAAAAAAAAAAAAAAACAAAAAAAAAAAAAEACAAAAAAAAAAAAAIACAAAAAAAAAAAAAMACAAAAAAAAAAAAAQACAAAAAAAAAABAAAACAAAAAAAAAABAAEACAAAAAAAAAABAAIACAAAAAAAAAABAAMACAAAAAAAAAABAAQACAAAAAAAAAACAAAACAAAAAAAAAACAAEACAAAAAAAAAACAAIACAAAAAAAAAACAAMACAAAAAAAAAACAAQACAAAAAAAAAADAAAACAAAAAAAAAADAAEACAAAAAAAAAADAAIACAAAAAAAAAADAAMACAAAAAAAAAADAAQACAAAAAAAAAAEAAAACAAAAAAAAAAEAAEACAAAAAAAAAAEAAIACAAAAAAAAAAEAAMACAAAAAAAAAAEAAQACAAAAAAAAAAFAAAACAAAAAAAAAAFAAEACAAAAAAAAAAFAAIACAAAAAAAAAAFAAMACAAAAAAAAAAGAAAACAAAAAAAAAAGAAEACAAAAAAAAAAGAAIACAAAAAAAAAAGAAMACAAAAAAAAAAHAAAACAAAAAAAAAAHAAEACAAAAAAAAAAHAAIACAAAAAAAAAAHAAMACAAAAAAAAAAIAAAACAAAAAAAAAAIAAEACAAAAAAAAAAIAAIACAAAAAAAAAAIAAMACAAAAAAAAAA=")
+tile_set = SubResource("TileSet_rkuhi")
+script = ExtResource("9_lwn41")
+background_color = "brown"

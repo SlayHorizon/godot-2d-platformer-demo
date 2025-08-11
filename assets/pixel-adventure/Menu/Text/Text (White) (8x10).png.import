@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://bnhgqdneckwad"
+path="res://.godot/imported/Text (White) (8x10).png-15adfef5e2ed1b6fc1d059d7e1734f35.fontdata"
+
+[deps]
+
+source_file="res://assets/pixel-adventure/Menu/Text/Text (White) (8x10).png"
+dest_files=["res://.godot/imported/Text (White) (8x10).png-15adfef5e2ed1b6fc1d059d7e1734f35.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("97-122", "32", "32", "32", "32", "48-57", "\'.\'", "\',\'", "\':\'", "\'?\'", "\'!\'", "\'(\'", "\')\'", "\'+\'", "\'-\'")
+kerning_pairs=PackedStringArray("")
+columns=10
+rows=5
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(0, 0, 0, 0)
+ascent=0
+descent=0
+fallbacks=[]
+compress=true
+scaling_mode=2

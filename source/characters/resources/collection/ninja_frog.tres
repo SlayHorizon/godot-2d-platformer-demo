@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=11 format=3 uid="uid://bvqxxai1mohqu"]
+
+[ext_resource type="Texture2D" uid="uid://cv0rowvckgb5g" path="res://assets/pixel-adventure/Main Characters/Appearing (96x96).png" id="1_mxtty"]
+[ext_resource type="Texture2D" uid="uid://do1fvsphcb6ni" path="res://assets/pixel-adventure/Main Characters/Desappearing (96x96).png" id="2_j57r1"]
+[ext_resource type="Texture2D" uid="uid://fnq77ci0obn2" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Double Jump (32x32).png" id="2_os4ih"]
+[ext_resource type="Texture2D" uid="uid://bp7rav8h03c4c" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Fall (32x32).png" id="3_eurpc"]
+[ext_resource type="Texture2D" uid="uid://bik24uk3jx5o5" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Hit (32x32).png" id="4_rg8cq"]
+[ext_resource type="Texture2D" uid="uid://bhveulgx5jiqo" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Idle (32x32).png" id="5_xau0j"]
+[ext_resource type="Texture2D" uid="uid://nmjma4m2jdsa" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Jump (32x32).png" id="6_ymcju"]
+[ext_resource type="Texture2D" uid="uid://4abks2t5o38b" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Run (32x32).png" id="7_33l50"]
+[ext_resource type="Script" uid="uid://d3t3qd3vee8re" path="res://source/characters/resources/character_resource.gd" id="8_gknvf"]
+[ext_resource type="Texture2D" uid="uid://bj7jydiobwr2f" path="res://assets/pixel-adventure/Main Characters/Ninja Frog/Wall Jump (32x32).png" id="9_k6sce"]
+
+[resource]
+script = ExtResource("8_gknvf")
+character_name = "Ninja Frog"
+idle_texture = ExtResource("5_xau0j")
+run_texture = ExtResource("7_33l50")
+jump_texture = ExtResource("6_ymcju")
+double_jump_texture = ExtResource("2_os4ih")
+wall_jump_texture = ExtResource("9_k6sce")
+fall_texture = ExtResource("3_eurpc")
+hit_texture = ExtResource("4_rg8cq")
+appear_texture = ExtResource("1_mxtty")
+desappear_texture = ExtResource("2_j57r1")

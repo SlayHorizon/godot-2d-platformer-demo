@@ -1,0 +1,78 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2dysy8ciq6t3"]
+
+[ext_resource type="Script" uid="uid://be7qj7dr1wwb5" path="res://source/ui/hud/hud.gd" id="1_6swf3"]
+[ext_resource type="FontFile" uid="uid://bnhgqdneckwad" path="res://assets/pixel-adventure/Menu/Text/Text (White) (8x10).png" id="1_wwh8y"]
+[ext_resource type="Script" uid="uid://cwtafvud2wpab" path="res://source/ui/hud/fruit_count.gd" id="2_ufr8b"]
+[ext_resource type="Shader" uid="uid://cyuyvt360bd36" path="res://source/shaders/hud.gdshader" id="4_0hf0d"]
+[ext_resource type="Texture2D" uid="uid://da8vnlcipy4xa" path="res://assets/pixel-adventure/Menu/Buttons/Restart.png" id="4_32kfj"]
+[ext_resource type="Script" uid="uid://c1yrukishr3lt" path="res://source/ui/hud/buttons/reload_button.gd" id="5_270yy"]
+[ext_resource type="Texture2D" uid="uid://b3mlwh0eenlkp" path="res://assets/pixel-adventure/Menu/Buttons/Close.png" id="6_o3yqv"]
+[ext_resource type="Texture2D" uid="uid://dyv32185pn2h8" path="res://assets/pixel-adventure/Menu/Buttons/Volume.png" id="6_r2w7h"]
+[ext_resource type="Script" uid="uid://d3tfcjsn5rnjg" path="res://source/ui/hud/buttons/sound_button.gd" id="6_v2jag"]
+[ext_resource type="Script" uid="uid://dp5pgya0v1wsa" path="res://source/ui/hud/buttons/exit_button.gd" id="7_fwfkc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i544m"]
+shader = ExtResource("4_0hf0d")
+shader_parameter/width = 1
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/flickering_speed = 0.0
+shader_parameter/minimal_flickering_alpha = 0.9
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7qq30"]
+shader = ExtResource("4_0hf0d")
+shader_parameter/width = 1
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/flickering_speed = 0.0
+shader_parameter/minimal_flickering_alpha = 0.9
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_6swf3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+alignment = 2
+
+[node name="ReloadButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+material = SubResource("ShaderMaterial_i544m")
+layout_mode = 2
+texture_normal = ExtResource("4_32kfj")
+script = ExtResource("5_270yy")
+
+[node name="SoundButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+material = SubResource("ShaderMaterial_7qq30")
+layout_mode = 2
+texture_normal = ExtResource("6_r2w7h")
+script = ExtResource("6_v2jag")
+
+[node name="ExitButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+material = SubResource("ShaderMaterial_7qq30")
+layout_mode = 2
+texture_normal = ExtResource("6_o3yqv")
+script = ExtResource("7_fwfkc")
+
+[node name="FruitCount" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0.129412, 0.121569, 0.188235, 1)
+theme_override_fonts/font = ExtResource("1_wwh8y")
+text = "0"
+horizontal_alignment = 1
+script = ExtResource("2_ufr8b")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ReloadButton" to="MarginContainer/HBoxContainer/ReloadButton" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SoundButton" to="MarginContainer/HBoxContainer/SoundButton" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ExitButton" to="MarginContainer/HBoxContainer/ExitButton" method="_on_pressed"]

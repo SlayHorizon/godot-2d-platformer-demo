@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=11 format=3 uid="uid://ggyykcquty08"]
+
+[ext_resource type="Texture2D" uid="uid://cv0rowvckgb5g" path="res://assets/pixel-adventure/Main Characters/Appearing (96x96).png" id="1_duya1"]
+[ext_resource type="Texture2D" uid="uid://do1fvsphcb6ni" path="res://assets/pixel-adventure/Main Characters/Desappearing (96x96).png" id="2_3k8p5"]
+[ext_resource type="Texture2D" uid="uid://bbsdo0h6g06hr" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Double Jump (32x32).png" id="2_bp0nv"]
+[ext_resource type="Texture2D" uid="uid://cx6ifar3pawv0" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Fall (32x32).png" id="3_2iwxt"]
+[ext_resource type="Texture2D" uid="uid://bkupwuic2ykgy" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Hit (32x32).png" id="4_3xqdo"]
+[ext_resource type="Texture2D" uid="uid://dogqrm4w7v4va" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Idle (32x32).png" id="5_1i5l3"]
+[ext_resource type="Texture2D" uid="uid://cumr3pe2w23i8" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Jump (32x32).png" id="6_63clm"]
+[ext_resource type="Texture2D" uid="uid://52nv7lpu1153" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Run (32x32).png" id="7_wujs5"]
+[ext_resource type="Script" uid="uid://d3t3qd3vee8re" path="res://source/characters/resources/character_resource.gd" id="8_ahu3l"]
+[ext_resource type="Texture2D" uid="uid://dfvit2ya3qfg1" path="res://assets/pixel-adventure/Main Characters/Virtual Guy/Wall Jump (32x32).png" id="9_xrnys"]
+
+[resource]
+script = ExtResource("8_ahu3l")
+character_name = "Virtual Guy"
+idle_texture = ExtResource("5_1i5l3")
+run_texture = ExtResource("7_wujs5")
+jump_texture = ExtResource("6_63clm")
+double_jump_texture = ExtResource("2_bp0nv")
+wall_jump_texture = ExtResource("9_xrnys")
+fall_texture = ExtResource("3_2iwxt")
+hit_texture = ExtResource("4_3xqdo")
+appear_texture = ExtResource("1_duya1")
+desappear_texture = ExtResource("2_3k8p5")

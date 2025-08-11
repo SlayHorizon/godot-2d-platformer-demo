@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk7lko3c8tqff"]
+
+[ext_resource type="Script" uid="uid://gom1e8rmj8d" path="res://source/maps/components/room_transition/room_transition.gd" id="1_ria45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrccy"]
+size = Vector2(16, 32)
+
+[node name="RoomTransition" type="Area2D"]
+position = Vector2(584, 96)
+monitorable = false
+script = ExtResource("1_ria45")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wrccy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

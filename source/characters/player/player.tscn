@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://bf6oy2fsg0bgs"]
+
+[ext_resource type="PackedScene" uid="uid://b85lnnjmjc2g6" path="res://source/characters/character.tscn" id="1_68le4"]
+[ext_resource type="Script" uid="uid://bpwdvwgselhhq" path="res://source/characters/player/player.gd" id="2_m8olb"]
+[ext_resource type="Script" uid="uid://c8f1flbe5s4id" path="res://source/characters/player/state_machine/states/idle.gd" id="6_bsp8t"]
+[ext_resource type="Script" uid="uid://e0bh4psd1cmi" path="res://source/characters/player/state_machine/states/run.gd" id="7_48rha"]
+[ext_resource type="Script" uid="uid://dqfnx8smdvb0v" path="res://source/characters/player/state_machine/states/jump.gd" id="8_ykxw0"]
+[ext_resource type="Script" uid="uid://bjjbanokwlg5s" path="res://source/characters/player/state_machine/states/fall.gd" id="9_a10b5"]
+[ext_resource type="Script" uid="uid://bcqruu4tlrixi" path="res://source/characters/player/state_machine/states/double_jump.gd" id="10_fwypc"]
+[ext_resource type="Script" uid="uid://b45i1uocilchy" path="res://source/characters/player/state_machine/states/wall_jump.gd" id="11_1whcd"]
+[ext_resource type="Script" uid="uid://cltuqle77smj8" path="res://source/characters/player/state_machine/states/hit.gd" id="12_kbj7s"]
+[ext_resource type="Script" uid="uid://r5og7ingmkvq" path="res://source/characters/player/state_machine/states/appear.gd" id="12_r5nwk"]
+
+[node name="Player" instance=ExtResource("1_68le4")]
+script = ExtResource("2_m8olb")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="3"]
+target_position = Vector2(0, 18)
+
+[node name="States" type="Node" parent="." index="4"]
+
+[node name="Idle" type="Node" parent="States" index="0" node_paths=PackedStringArray("player", "animation_player")]
+script = ExtResource("6_bsp8t")
+player = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+state_animation_name = &"idle"
+
+[node name="Run" type="Node" parent="States" index="1" node_paths=PackedStringArray("player", "animation_player")]
+script = ExtResource("7_48rha")
+player = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+state_animation_name = &"run"
+
+[node name="Jump" type="Node" parent="States" index="2" node_paths=PackedStringArray("player", "animation_player")]
+script = ExtResource("8_ykxw0")
+player = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+state_animation_name = &"jump"
+
+[node name="Fall" type="Node" parent="States" index="3" node_paths=PackedStringArray("player", "animation_player")]
+script = ExtResource("9_a10b5")
+player = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+state_animation_name = &"fall"
+
+[node name="DoubleJump" type="Node" parent="States" index="4" node_paths=PackedStringArray("player", "animation_player")]
+script = ExtResource("10_fwypc")
+player = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+state_animation_name = &"double_jump"
+
+[node name="WallJump" type="Node" parent="States" index="5" node_paths=PackedStringArray("player", "animation_player")]
+script = ExtResource("11_1whcd")
+player = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+state_animation_name = &"wall_jump"
+
+[node name="Hit" type="Node" parent="States" index="6" node_paths=PackedStringArray("player", "animation_player")]
+script = ExtResource("12_kbj7s")
+player = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+state_animation_name = &"hit"
+
+[node name="Appear" type="Node" parent="States" index="7" node_paths=PackedStringArray("player", "animation_player")]
+script = ExtResource("12_r5nwk")
+player = NodePath("../..")
+animation_player = NodePath("../../AnimationPlayer")
+state_animation_name = &"appear"

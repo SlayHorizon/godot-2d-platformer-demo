@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://dhaqun24qxq28"
+path="res://.godot/imported/Text (Black) (8x10).png-9be1201a7cd7f3a806ff026f21559e6a.fontdata"
+
+[deps]
+
+source_file="res://assets/pixel-adventure/Menu/Text/Text (Black) (8x10).png"
+dest_files=["res://.godot/imported/Text (Black) (8x10).png-9be1201a7cd7f3a806ff026f21559e6a.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("97-122", "32", "32", "32", "32", "48-57", "\'.\'", "\',\'", "\':\'", "\'?\'", "\'!\'", "\'(\'", "\')\'", "\'+\'", "\'-\'")
+kerning_pairs=PackedStringArray()
+columns=10
+rows=5
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(0, 0, 0, 0)
+ascent=0
+descent=0
+fallbacks=[]
+compress=true
+scaling_mode=2

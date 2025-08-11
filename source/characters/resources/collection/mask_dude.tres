@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=11 format=3 uid="uid://dcy1n344yi0yb"]
+
+[ext_resource type="Texture2D" uid="uid://cv0rowvckgb5g" path="res://assets/pixel-adventure/Main Characters/Appearing (96x96).png" id="1_7t6kg"]
+[ext_resource type="Texture2D" uid="uid://cgpk86sc26voh" path="res://assets/pixel-adventure/Main Characters/Mask Dude/Double Jump (32x32).png" id="1_xw5c6"]
+[ext_resource type="Texture2D" uid="uid://do1fvsphcb6ni" path="res://assets/pixel-adventure/Main Characters/Desappearing (96x96).png" id="2_p1mbw"]
+[ext_resource type="Texture2D" uid="uid://thiwcj7hjmgw" path="res://assets/pixel-adventure/Main Characters/Mask Dude/Fall (32x32).png" id="2_s3mwr"]
+[ext_resource type="Texture2D" uid="uid://cur6nq4pxft1p" path="res://assets/pixel-adventure/Main Characters/Mask Dude/Hit (32x32).png" id="3_8bjhs"]
+[ext_resource type="Texture2D" uid="uid://br5tukwo7ix6w" path="res://assets/pixel-adventure/Main Characters/Mask Dude/Idle (32x32).png" id="4_txj5m"]
+[ext_resource type="Texture2D" uid="uid://3h15ek0m8mwk" path="res://assets/pixel-adventure/Main Characters/Mask Dude/Jump (32x32).png" id="5_bofbm"]
+[ext_resource type="Texture2D" uid="uid://8qdqxymreyhw" path="res://assets/pixel-adventure/Main Characters/Mask Dude/Run (32x32).png" id="6_qvtg2"]
+[ext_resource type="Script" uid="uid://d3t3qd3vee8re" path="res://source/characters/resources/character_resource.gd" id="7_vruxn"]
+[ext_resource type="Texture2D" uid="uid://dgjq33y6rlbrc" path="res://assets/pixel-adventure/Main Characters/Mask Dude/Wall Jump (32x32).png" id="8_isri5"]
+
+[resource]
+script = ExtResource("7_vruxn")
+character_name = "Mask Dude"
+idle_texture = ExtResource("4_txj5m")
+run_texture = ExtResource("6_qvtg2")
+jump_texture = ExtResource("5_bofbm")
+double_jump_texture = ExtResource("1_xw5c6")
+wall_jump_texture = ExtResource("8_isri5")
+fall_texture = ExtResource("2_s3mwr")
+hit_texture = ExtResource("3_8bjhs")
+appear_texture = ExtResource("1_7t6kg")
+desappear_texture = ExtResource("2_p1mbw")
